@@ -1,5 +1,6 @@
 package com.kimsk.springboot.domain.posts;
 
+import com.kimsk.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id
     //auto increment 를 사용하기 위해서는 IDENTITY 옵션으로 GenerationType 을 지정해야한다.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
